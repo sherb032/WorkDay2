@@ -3,17 +3,25 @@
 Public Class Form1
 
     Private Sub btnFindLarger_Click(sender As System.Object, e As System.EventArgs) Handles btnFindLarger.Click
-        Dim num1, num2, largerNum As Double
+        Dim num1, num2 As Double
 
-        Dim st1 As String = txtFirstNum.Text
-        Dim st2 As String = txtSecondNum.Text
+        'Dim st1 As String = txtFirstNum.Text
+        'Dim st2 As String = txtSecondNum.Text
 
-        num1 = CDbl(st1)
-        num2 = CDbl(st2)
+        'num1 = CDbl(st1)
+        'num2 = CDbl(st2)
 
-        ' Your code here
+        num1 = CDbl(txtFirstNum.Text)
+        num2 = CDbl(txtSecondNum.Text)
 
-        txtResult.Text = "Not implemented yet"
+        If num1 > num2 Then
+            txtResult.Text = "The larger number is " & num1
+        ElseIf num1 < num2 Then
+            txtResult.Text = "The larger number is " & num2
+        Else
+            txtResult.Text = "The numbers are equal"
+        End If
+
     End Sub
 
 End Class
